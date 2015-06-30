@@ -7,5 +7,7 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
 
-  has_many :posts
+  has_many :comments
+  validates :content, presence: true,
+                    length: { minimum: 5 }
 end

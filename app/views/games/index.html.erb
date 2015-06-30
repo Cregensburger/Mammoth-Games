@@ -1,11 +1,12 @@
-<div class="col-md-12"><h1>Games Listing</h1></div>
+<div class="col-md-12"><h1>Game Listing</h1></div>
 <br>
 <div class="col-md-4">
 	<p> Hangman</p>
-	<%= image_tag "thumbnailPlaceholder.png", :size => '200x200' %>
+	<%= link_to image_tag("thumbnailPlaceholder.png", :size => '260x180'), static_pages_hangman_path %>
+	
 </div>
 
 <div class="col-md-4">
-	<p> Tic-Tac-Toe</p>
-	<%= image_tag "thumbnailPlaceholder.png", :size => '200x200' %>
+	<p> Tic Tac Toe</p>
+	<%= link_to image_tag("thumbnailPlaceholder.png", :size => '260x180'), games_path %>
 </div>

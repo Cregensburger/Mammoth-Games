@@ -1,4 +1,4 @@
 class GamesController < ApplicationController
-	def index
+	def hangman
 	end
 end

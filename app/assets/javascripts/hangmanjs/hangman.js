@@ -1,3 +1,6 @@
+//= require_tree ./hangmanjs //requires all jsfiles in hangman
+
+
 var movieArray = ["FARGO", "FROZEN", "WANTED", "SPIDERMAN", "THOR", "VERTIGO", "TWINS", "TAKEN", "MILK", "JUNO", "SIGNS", "HITCH", "ZOMBIELAND", "CRASH", "MULAN", "BIG", "ROCKY", "SUPERBAD", "GHOST", "CAPOTE", "TRON", "GLORY", "GREMLINS", "CLERKS", "CHUCKY", "SHREK", "PSYCHO", "WISHCRAFT", "CARS", "RAY", "ALIENS", "ARGO", "CLUE", "LABYRINTH", "SCREAM", "MISERY", "DAVE"];
 var totalGuesses = 8;
 var hiddenWord = [];
@@ -76,3 +79,31 @@ function strikeCounter(totalGuesses) {
 	}
 }
 
+
+function listenForNewGame()  {
+	$('#new-game').click(function() {
+		newGame();
+	});
+}
+
+function listenForGiveUp()  {
+    $("#give-up").click(function() {
+        $('#finalWord').text(movieTitle);
+    })
+}
+
+function listenForEnterPress()  {
+	$("#letter").keyup(function (e) {
+        if (e.keyCode == 13) {
+        	// if ($('#letter').val() == "") {
+        	// 	// alert("Guess a letter");
+        	// }
+        } 
+        else {
+        	letterChecker(movieTitle);
+            		
+        	}
+            
+        
+    }); 
+}

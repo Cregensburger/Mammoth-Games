@@ -1,5 +1,5 @@
 class InformationsController < ApplicationController
 	skip_before_filter :require_login
-  def about
+  def index
   end
 end

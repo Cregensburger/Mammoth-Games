@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static_pages/hangman'
+
+  get 'static_pages/tictactoe'
+
   get 'games/index'
 
   get 'user_sessions/new'
@@ -7,7 +11,13 @@ Rails.application.routes.draw do
 
   get 'user_sessions/destroy'
 
+  get 'static_pages/hangman'
+
   resources :users
+
+  resources :users do
+    resources :comments
+  end
  
 
 	root :to => 'games#index'
@@ -19,5 +29,8 @@ Rails.application.routes.draw do
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
   get '/informations' => 'informations#index'
+
+  
+
 
 end

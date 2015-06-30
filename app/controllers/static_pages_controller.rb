@@ -1,7 +1,7 @@
-class StaticPagesController < ApplicationController
-  def hangman
-  end
+# class StaticPagesController < ApplicationController
+#   def hangman
+#   end
 
-  def tictactoe
-  end
-end
+#   def tictactoe
+#   end
+# end

@@ -1,7 +1,7 @@
 //= require_tree ./hangmanjs //requires all jsfiles in hangman
 
 
-var movieArray = ["FARGO", "FROZEN", "WANTED", "SPIDERMAN", "THOR", "VERTIGO", "TWINS", "TAKEN", "MILK", "JUNO", "SIGNS", "HITCH", "ZOMBIELAND", "CRASH", "MULAN", "BIG", "ROCKY", "SUPERBAD", "GHOST", "CAPOTE", "TRON", "GLORY", "GREMLINS", "CLERKS", "CHUCKY", "SHREK", "PSYCHO", "WISHCRAFT", "CARS", "RAY", "ALIENS", "ARGO", "CLUE", "LABYRINTH", "SCREAM", "MISERY", "DAVE"];
+var movieArray = ["FARGO", "FROZEN", "WANTED", "SPIDERMAN", "THOR", "VERTIGO", "TWINS", "TAKEN", "MILK", "JUNO", "SIGNS", "HITCH", "ZOMBIELAND", "CRASH", "MULAN", "BIG", "ROCKY", "SUPERBAD", "GHOST", "CAPOTE", "TRON", "GLORY", "GREMLINS", "CLERKS", "SHREK", "PSYCHO", "WISHCRAFT", "CARS", "RAY", "ALIENS", "ARGO", "CLUE", "LABYRINTH", "SCREAM", "MISERY", "DAVE"];
 var totalGuesses = 8;
 var hiddenWord = [];
 

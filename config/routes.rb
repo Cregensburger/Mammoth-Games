@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   get 'user_sessions/destroy'
 
-  get 'static_pages/hangman'
+  get 'games/hangman'
+
+  get 'games/tictactoe'
 
   resources :users
 
@@ -19,9 +21,13 @@ Rails.application.routes.draw do
     resources :comments
   end
  
+  resources :games do
+    resources :comments
+  end
 
 	root :to => 'games#index'
 	  resources :games
+    resources :comments
 	  resources :user_sessions
 	  resources :users
 
@@ -30,7 +36,6 @@ Rails.application.routes.draw do
 
   get '/informations' => 'informations#index'
 
-  
 
 
 end

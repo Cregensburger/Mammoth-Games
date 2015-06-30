@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   get 'user_sessions/destroy'
 
-  get 'informations/index'
-
   resources :users
  
 
@@ -20,5 +18,6 @@ Rails.application.routes.draw do
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
-  get 'posts' => 'post/create', :as => :posts
+  get '/informations' => 'informations#index'
+
 end

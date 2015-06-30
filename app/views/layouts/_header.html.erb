@@ -2,7 +2,6 @@
   <div class="container">
     <div id="nav">
 		<% if current_user %>
-			<%= link_to "About Us", information_path %> 
 			&#8226;
 			<%= link_to "Edit Your Profile", edit_user_path(current_user.id) %>
 			&#8226;

@@ -56,10 +56,13 @@ nav.navbar.navbar-default.navbar-fixed-top {
 #topNav {
 	padding-left: 25em;
 }
+
+/*inactive circle-y bits of carousel indicator*/
 li.slideIndicators {
 	background-color: orange;
 }
 
+/*active circle-y bits of carousel indicator*/
 li.slideIndicators.active {
 	background-color: #6699FF;
 }
@@ -70,13 +73,17 @@ body {
 	background-color: #FFFF99;
 	color: #181822;
 	text-align: center;
+	margin-bottom: 10em;
 }
 tbody th {
 	text-align: center;
 	margin: 0 auto;
 }
 
-/* pictures */
+body > .container {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
 
 
 /*Footer Styling*/

@@ -21,7 +21,7 @@ li {
 	display: inline;
 }
 nav {
-	background-color: orange;
+	background-color: #6699FF;
 	text-align: center;
 }
 
@@ -30,25 +30,46 @@ nav {
 }
 
 .nav {
-	margin-top: 10em;
+
 	text-align: center;
 	color: orange;
 }
 
 nav.navbar.navbar-default.navbar-fixed-top {
-	padding-top: 4em;
 	text-align: center;
 	color: #330033;
 	background-color: #6699FF;
 }
 
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+.carousel-inner > .item {
+	background-color: #6699FF;
+}
+
+/*bullet points between nav bar listing*/
+.bulletPoint {
+	padding-top: 1.3em;
+}
+
+#topNav {
+	padding-left: 25em;
+}
+li.slideIndicators {
+	background-color: orange;
+}
+
+li.slideIndicators.active {
+	background-color: #6699FF;
+}
+
+
 /*Body Styling*/
 body {
 	background-color: #FFFF99;
 	color: #181822;
-	padding-top: 9em;
 	text-align: center;
-	padding-left: 5em;
 }
 tbody th {
 	text-align: center;

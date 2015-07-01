@@ -11,13 +11,23 @@
 
 <%= render 'layouts/header' %>
 
+
 <div>
 	<p id="notice"><%= flash[:notice] %></p>
 	<p id="alert"><%= flash[:alert] %></p>
 </div>
 
 <%= yield %>
+
 <%= render 'layouts/footer' %>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $("#myModal").on("show.bs.modal", function(e) {
+		    var link = $(e.relatedTarget);
+		    $(this).find(".modal-body").load(link.attr("href"));
+});
+	});
+</script>
 </body>
 </html>

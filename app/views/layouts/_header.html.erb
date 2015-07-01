@@ -1,24 +1,63 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div id="nav">
-		<% if current_user %>
-			<%= link_to "Information", informations_path %>
-			&#8226;
-			<%= link_to "Edit Your Profile", edit_user_path(current_user.id) %>
-			&#8226;
-			<%= link_to "Games", games_path %>
-			&#8226;
-			<%= link_to "View Users", users_path %>
-			&#8226;
-			<%= link_to "Logout", :logout, method: :post %>
+<header>
+  <div class="headerBG">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li class="slideIndicators" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li class="slideIndicators" data-target="#myCarousel" data-slide-to="1"></li>
+        <li class="slideIndicators" data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
 
-		<% else %>
-			<%= link_to "Information", informations_path %>
-		 	&#8226;
-		 	<%= link_to "Register", new_user_path %> 
-		 	&#8226;
-		 	<%= link_to "Login", :login %>
-	<% end %>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag("mammothgamesHeader.png", :alt => "Mammoth Games Header") %> 
+        </div>
+
+        <div class="item">
+          <%= image_tag("hangmanmoviesHeader.png", :alt => "Hangman Movies Header") %>
+        </div>
+
+        <div class="item">
+          <%= image_tag("catsgameHeader.png", :alt => "Tic Tac Toe Header") %> 
+        </div>
+      </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="arrowLeft">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="arrowRight">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+      <nav>
+	<div class="container">
+    	<ul class="nav navbar-nav navbar-center" id="topNav">
+			<% if current_user %>
+				<li><%= link_to "Information", informations_path %>
+				<li class="bulletPoint">&#8226;</li>
+				<li><%= link_to "Edit Your Profile", edit_user_path(current_user.id) %></li>
+				<li class="bulletPoint">&#8226;</li>
+				<li><%= link_to "Games", games_path %></li>
+				<li class="bulletPoint">&#8226;</li>
+				<li><%= link_to "View Users", users_path %></li>
+				<li class="bulletPoint">&#8226;</li>
+				<li><%= link_to "Logout", :logout, method: :post %></li>
+
+			<% else %>
+				<li><%= link_to "Information", informations_path %></li>
+			 	<li class="bulletPoint">&#8226;</li>
+			 	<li><%= link_to "Register", new_user_path %> </li>
+			 	<li class="bulletPoint">&#8226;</li>
+			 	<li><%= link_to "Login", :login %></li>
+			<% end %>
+		</ul>
 	</div>
+      </nav>
+
+    </div>
   </div>
-</nav>
+</header>

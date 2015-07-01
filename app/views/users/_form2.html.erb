@@ -1,0 +1,12 @@
+<% form_for(:user, @user, :url => {:action => 'update', :id => @user.id}) do |f| %>
+  <p>
+    Email: <%= f.text_field :email %>
+  </p>
+  <p>
+    About you: <%= f.text_field :about %>
+  </p>
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>
+

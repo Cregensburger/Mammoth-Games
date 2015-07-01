@@ -85,7 +85,19 @@ body > .container {
 	padding-bottom: 60px;
 }
 
+.navbarButton {
+	outline: 0;
+	color: #101d37;
+	background: none;
+	border: 0;
+}
 
+a.btn.btn-default {
+	outline: 0;
+	color: #101d37;
+	background: none;
+	border: 0;
+}
 /*Footer Styling*/
 nav.navbar.navbar-default.navbar-fixed-bottom {
 	text-align: center;

@@ -36,23 +36,22 @@
       <nav>
 	<div class="container">
     	<ul class="nav navbar-nav navbar-center" id="topNav">
+        <li><a href="remoteContent.html" data-toggle="modal" data-target="#myModal" class="btn btn-default"> About Us</a></li>
+        <li class="bulletPoint">&#8226;</li>
 			<% if current_user %>
-				<li><%= link_to "Information", informations_path %>
+				<li><%= link_to '<button type="button" class="navbarButton">Edit Profile</button>'.html_safe, edit_user_path(current_user.id) %></li>
 				<li class="bulletPoint">&#8226;</li>
-				<li><%= link_to "Edit Your Profile", edit_user_path(current_user.id) %></li>
+				<li><%= link_to '<button type="button" class="navbarButton">Games</button>'.html_safe, games_path %></li>
 				<li class="bulletPoint">&#8226;</li>
-				<li><%= link_to "Games", games_path %></li>
+				<li><%= link_to '<button type="button" class="navbarButton">Users</button>'.html_safe, users_path %></li>
 				<li class="bulletPoint">&#8226;</li>
-				<li><%= link_to "View Users", users_path %></li>
-				<li class="bulletPoint">&#8226;</li>
-				<li><%= link_to "Logout", :logout, method: :post %></li>
+				<li><%= link_to '<button type="button" class="navbarButton">Logout</button>'.html_safe, :logout, method: :post %></li>
 
 			<% else %>
-				<li><%= link_to "Information", informations_path %></li>
+
+			 	<li><%= link_to '<button type="button" class="navbarButton">Register</button>'.html_safe, new_user_path %> </li>
 			 	<li class="bulletPoint">&#8226;</li>
-			 	<li><%= link_to "Register", new_user_path %> </li>
-			 	<li class="bulletPoint">&#8226;</li>
-			 	<li><%= link_to "Login", :login %></li>
+			 	<li><%= link_to '<button type="button" class="navbarButton">Login</button>'.html_safe, :login %></li>
 			<% end %>
 		</ul>
 	</div>
@@ -60,4 +59,21 @@
 
     </div>
   </div>
+  <!-- Default bootstrap modal example -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">About Us</h4>
+          </div>
+          <div class="modal-body">
+            A placeholder to discuss all the neat things about our site
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="navbarButton" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </header>

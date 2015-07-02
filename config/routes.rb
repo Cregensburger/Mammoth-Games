@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'games/tictactoe'
 
+  get 'comments/index'
   resources :users
 
   resources :users do

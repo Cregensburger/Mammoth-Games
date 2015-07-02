@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 	def new
-	  @user = User.new
+	  @game = Game.new
 	end
 
 	def hangman

@@ -8,6 +8,8 @@ The hardest part I had was, honestly, just trying to work with Ruby. Back-end st
 
 So far as using my app... there really isn't a whole lot to do. Just remember to bundle install. 
 
-User Stories: https://trello.com/b/uL5nlNeE/mammoth-games
-Github Site: https://github.com/Cregensburger/Mammoth-Games
-Webapp: 
+Edit: I finally got my facebook API commenting thing to work. Yayyy
+
+User Stories: https://trello.com/b/uL5nlNeE/mammoth-games<br>
+Github Site: https://github.com/Cregensburger/Mammoth-Games<br>
+Webapp: https://tranquil-inlet-3260.herokuapp.com/

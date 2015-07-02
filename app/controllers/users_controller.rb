@@ -10,6 +10,7 @@ skip_before_filter :require_login, only: [:new, :create]
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -17,8 +18,9 @@ skip_before_filter :require_login, only: [:new, :create]
     @user = User.new
   end
 
-  # GET /users/1/edit
+  # GET /users/1/edit 
   def edit
+    @user = User.find params[:id]
   end
 
   # POST /users
@@ -40,6 +42,7 @@ skip_before_filter :require_login, only: [:new, :create]
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    @user = User.find(params[:id])
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to :games, notice: 'User was successfully updated.' }
@@ -54,7 +57,7 @@ skip_before_filter :require_login, only: [:new, :create]
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
+    @user = User.find(params[:id])
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
